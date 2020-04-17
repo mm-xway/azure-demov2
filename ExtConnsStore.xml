@@ -2433,13 +2433,14 @@
 	<fval name="minIdle"><value>0</value></fval>
 	<fval name="name"><value>Default Database Connection</value></fval>
 	<fval name="numTestsPerEvictionRun"><value>3</value></fval>
-	<fval name="password"><value></value></fval>
+	<fval name="password"><value>VGVzdCEyMzQ1Njc4</value></fval>
 	<fval name="passwordType"><value>entered</value></fval>
 	<fval name="setPoolPreparedStatements"><value>0</value></fval>
 	<fval name="timeBetweenEvictionRunsMillis"><value>-1</value></fval>
 	<fval name="timezoneAware"><value>0</value></fval>
-	<fval name="url"><value>jdbc:mysql://127.0.0.1:3306/DefaultDb</value></fval>
+	<fval name="url"><value>jdbc:mysql://127.0.0.1:3306/reports</value></fval>
 	<fval name="username"><value>root</value></fval>
+	<fval name="wildcardPassword"><value></value></fval>
 </entity>
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="DbConnection" entityPK="-349754666433404866" parentPK="5164041449760222904">
 	<fval name="initialSize"><value>0</value></fval>

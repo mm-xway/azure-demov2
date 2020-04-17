@@ -10482,13 +10482,15 @@
 	<fval name="applicationQuotaWarnThresholdPercent"><value>80</value></fval>
 	<fval name="asyncExecutorStopWaitMs"><value>5000</value></fval>
 	<fval name="communityName"><value>Community</value></fval>
+	<fval name="dbConn"><value contentType="reference">
+<key type='DbConnectionGroup'><id field='name' value='Database Connections'/><key type='DbConnection'><id field='name' value='Default Database Connection'/></key></key>	</value></fval>
 	<fval name="excludeApiDeprecatedHeader"><value>false</value></fval>
 	<fval name="excludeApiRetireTimeHeader"><value>false</value></fval>
 	<fval name="latestRestApiVersionUri"><value></value></fval>
 	<fval name="ldapPort"><value>0</value></fval>
 	<fval name="lifecycleSchedulerCorePoolSize"><value>1</value></fval>
 	<fval name="lifecycleSchedulerStopWaitMs"><value>5000</value></fval>
-	<fval name="metricsStoringEnabled"><value>false</value></fval>
+	<fval name="metricsStoringEnabled"><value>1</value></fval>
 	<fval name="name"><value>Portal Config</value></fval>
 	<fval name="oauth2Hostname"><value></value></fval>
 	<fval name="oauth2LoginPath"><value>/api/oauth/authorize</value></fval>
@@ -24014,13 +24016,15 @@
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="DatabaseLogger" entityPK="-4495753658113302009" parentPK="1281307126392515331">
 	<fval name="connection"><value contentType="reference">
 <key type='DbConnectionGroup'><id field='name' value='Database Connections'/><key type='DbConnection'><id field='name' value='Default Database Connection'/></key></key>	</value></fval>
-	<fval name="enabled"><value>0</value></fval>
+	<fval name="enabled"><value>1</value></fval>
 	<fval name="name"><value>Database Logger</value></fval>
+	<fval name="signingCert"><value contentType="reference">-1</value></fval>
 </entity>
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="SyslogLogger" entityPK="-4112204870607826339" parentPK="1281307126392515331">
 	<fval name="enabled"><value>0</value></fval>
 	<fval name="format"><value>${level} ${timestamp} ${id} ${text} ${filterType} ${filterName}</value></fval>
 	<fval name="name"><value>SyslogLogger Logger</value></fval>
+	<fval name="syslogServer"><value contentType="reference">-1</value></fval>
 </entity>
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="LocalUnixSyslogLogger" entityPK="4860789489167032891" parentPK="1281307126392515331">
 	<fval name="enabled"><value>0</value></fval>
@@ -24037,7 +24041,8 @@
 	<fval name="maxFiles"><value>20</value></fval>
 	<fval name="maxLogFileSize"><value>1000</value></fval>
 	<fval name="name"><value>Text Rollover File Logger</value></fval>
-	<fval name="rollOverDaily"><value>true</value></fval>
+	<fval name="rollOverDaily"><value>1</value></fval>
+	<fval name="signingCert"><value contentType="reference">-1</value></fval>
 </entity>
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="XMLRollOverLogger" entityPK="6745096911553974962" parentPK="1281307126392515331">
 	<fval name="baseLogFileName"><value>transactionLog</value></fval>
@@ -24048,7 +24053,8 @@
 	<fval name="maxFiles"><value>20</value></fval>
 	<fval name="maxLogFileSize"><value>1000</value></fval>
 	<fval name="name"><value>Text Rollover File Logger</value></fval>
-	<fval name="rollOverDaily"><value>true</value></fval>
+	<fval name="rollOverDaily"><value>1</value></fval>
+	<fval name="signingCert"><value contentType="reference">-1</value></fval>
 </entity>
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="OPDbConfig" entityPK="1891644490832731116" parentPK="0">
 	<fval name="dataDirectory"><value>conf/opsdb.d</value></fval>
