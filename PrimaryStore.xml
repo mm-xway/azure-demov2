@@ -21792,6 +21792,79 @@
 	<fval name="outputContentType"><value>text/plain</value></fval>
 	<fval name="successNode"><value contentType="reference">-8006021002374516710</value></fval>
 </entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="FilterCircuit" entityPK="-3541664421139843503" parentPK="699613057680812597">
+	<fval name="category"><value contentType="reference">1496588587276026097</value></fval>
+	<fval name="description"><value></value></fval>
+	<fval name="logMask"><value>3</value></fval>
+	<fval name="name"><value>Decrypt paylaod using PGP</value></fval>
+	<fval name="start"><value contentType="reference">5473492856912364787</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="Reflector" entityPK="-5812568411983864156" parentPK="-3541664421139843503">
+	<fval name="abortProcessingOnLogError"><value>0</value></fval>
+	<fval name="category"><value contentType="reference">788334387918032849</value></fval>
+	<fval name="httpResponseStatus"><value>200</value></fval>
+	<fval name="logFailure"><value>Failed to echo back the message</value></fval>
+	<fval name="logFatal"><value>Error occurred while echoing the message. Error: ${circuit.exception}</value></fval>
+	<fval name="logMask"><value>2</value></fval>
+	<fval name="logMaskType"><value>SERVICE</value></fval>
+	<fval name="logSuccess"><value>Successfully echoed back the message</value></fval>
+	<fval name="name"><value>Reflect Message</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="PGPDecryptFilter" entityPK="-2978653015047447764" parentPK="-3541664421139843503">
+	<fval name="abortProcessingOnLogError"><value>0</value></fval>
+	<fval name="category"><value contentType="reference">788334387918032849</value></fval>
+	<fval name="contentType"><value>application/octet-stream</value></fval>
+	<fval name="decrypt"><value>1</value></fval>
+	<fval name="failDecryptNoSignature"><value>0</value></fval>
+	<fval name="failureNode"><value contentType="reference">-1</value></fval>
+	<fval name="keyPair"><value contentType="reference">
+<key type='PGPKeyPairs'><id field='name' value='PGP Key Pairs'/><key type='PGPKeyPair'><id field='alias' value='kleopatranopass'/></key></key>	</value></fval>
+	<fval name="keyPairAliasAttribute"><value></value></fval>
+	<fval name="logFailure"><value>Filter failed</value></fval>
+	<fval name="logFatal"><value>Filter aborted due to exception</value></fval>
+	<fval name="logMask"><value>2</value></fval>
+	<fval name="logMaskType"><value>SERVICE</value></fval>
+	<fval name="logSuccess"><value>Filter passed</value></fval>
+	<fval name="name"><value>PGP Decrypt and Verify</value></fval>
+	<fval name="privateKeyAttribute"><value></value></fval>
+	<fval name="privateKeyLocation"><value>0</value></fval>
+	<fval name="signKeyAttribute"><value></value></fval>
+	<fval name="signKeyLocation"><value>0</value></fval>
+	<fval name="signKeyPair"><value contentType="reference">
+<key type='PGPKeyPairs'><id field='name' value='PGP Key Pairs'/><key type='PGPKeyPair'><id field='alias' value='kleopatranopass'/></key></key>	</value></fval>
+	<fval name="signKeyPairAliasAttribute"><value></value></fval>
+	<fval name="signMethod"><value>0</value></fval>
+	<fval name="signMethodTwoPass"><value>0</value></fval>
+	<fval name="successNode"><value contentType="reference">-5812568411983864156</value></fval>
+	<fval name="verify"><value>1</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="TraceFilter" entityPK="5473492856912364787" parentPK="-3541664421139843503">
+	<fval name="abortProcessingOnLogError"><value>0</value></fval>
+	<fval name="category"><value contentType="reference">788334387918032849</value></fval>
+	<fval name="doIndent"><value>1</value></fval>
+	<fval name="logFailure"><value>Failed to trace the message properties</value></fval>
+	<fval name="logFatal"><value>Error while tracing the message properties. Error: ${circuit.exception}</value></fval>
+	<fval name="logMask"><value>2</value></fval>
+	<fval name="logMaskType"><value>SERVICE</value></fval>
+	<fval name="logSuccess"><value>Traced the message properties</value></fval>
+	<fval name="name"><value>Trace Filter</value></fval>
+	<fval name="successNode"><value contentType="reference">-2978653015047447764</value></fval>
+	<fval name="traceAttributes"><value>1</value></fval>
+	<fval name="traceBody"><value>1</value></fval>
+	<fval name="traceLevel"><value>3</value></fval>
+	<fval name="traceMsg"><value></value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="Reflector" entityPK="5786111719326558949" parentPK="-3541664421139843503">
+	<fval name="abortProcessingOnLogError"><value>0</value></fval>
+	<fval name="category"><value contentType="reference">788334387918032849</value></fval>
+	<fval name="httpResponseStatus"><value>401</value></fval>
+	<fval name="logFailure"><value>Failed to echo back the message</value></fval>
+	<fval name="logFatal"><value>Error occurred while echoing the message. Error: ${circuit.exception}</value></fval>
+	<fval name="logMask"><value>2</value></fval>
+	<fval name="logMaskType"><value>SERVICE</value></fval>
+	<fval name="logSuccess"><value>Successfully echoed back the message</value></fval>
+	<fval name="name"><value>Unauthorized</value></fval>
+</entity>
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="FilterCircuit" entityPK="-3032405435885959619" parentPK="699613057680812597">
 	<fval name="category"><value contentType="reference">1496588587276026097</value></fval>
 	<fval name="description"><value></value></fval>
@@ -22103,6 +22176,54 @@
 	<fval name="logMaskType"><value>SERVICE</value></fval>
 	<fval name="logSuccess"><value>Successfully echoed back the message</value></fval>
 	<fval name="name"><value>Send response</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="FilterCircuit" entityPK="-727168067432090044" parentPK="699613057680812597">
+	<fval name="category"><value contentType="reference">1496588587276026097</value></fval>
+	<fval name="description"><value></value></fval>
+	<fval name="logMask"><value>3</value></fval>
+	<fval name="name"><value>Encrypt payload using PGP</value></fval>
+	<fval name="start"><value contentType="reference">6837357700406235539</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="Reflector" entityPK="204677592842566734" parentPK="-727168067432090044">
+	<fval name="abortProcessingOnLogError"><value>0</value></fval>
+	<fval name="category"><value contentType="reference">788334387918032849</value></fval>
+	<fval name="httpResponseStatus"><value>200</value></fval>
+	<fval name="logFailure"><value>Failed to echo back the message</value></fval>
+	<fval name="logFatal"><value>Error occurred while echoing the message. Error: ${circuit.exception}</value></fval>
+	<fval name="logMask"><value>2</value></fval>
+	<fval name="logMaskType"><value>SERVICE</value></fval>
+	<fval name="logSuccess"><value>Successfully echoed back the message</value></fval>
+	<fval name="name"><value>Reflect Message</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="PGPEncryptFilter" entityPK="6837357700406235539" parentPK="-727168067432090044">
+	<fval name="abortProcessingOnLogError"><value>0</value></fval>
+	<fval name="armor"><value>1</value></fval>
+	<fval name="category"><value contentType="reference">788334387918032849</value></fval>
+	<fval name="encrypt"><value>1</value></fval>
+	<fval name="hashAlgo"><value>SHA256</value></fval>
+	<fval name="keyPair"><value contentType="reference">
+<key type='PGPKeyPairs'><id field='name' value='PGP Key Pairs'/><key type='PGPKeyPair'><id field='alias' value='kleopatranopass'/></key></key>	</value></fval>
+	<fval name="keyPairAliasAttribute"><value></value></fval>
+	<fval name="logFailure"><value>Filter failed</value></fval>
+	<fval name="logFatal"><value>Filter aborted due to exception</value></fval>
+	<fval name="logMask"><value>2</value></fval>
+	<fval name="logMaskType"><value>SERVICE</value></fval>
+	<fval name="logSuccess"><value>Filter passed</value></fval>
+	<fval name="name"><value>PGP Encrypt and Sign</value></fval>
+	<fval name="publicKeyAttribute"><value></value></fval>
+	<fval name="publicKeyLocation"><value>0</value></fval>
+	<fval name="sign"><value>1</value></fval>
+	<fval name="signKeyAttribute"><value></value></fval>
+	<fval name="signKeyLocation"><value>0</value></fval>
+	<fval name="signKeyPair"><value contentType="reference">
+<key type='PGPKeyPairs'><id field='name' value='PGP Key Pairs'/><key type='PGPKeyPair'><id field='alias' value='kleopatranopass'/></key></key>	</value></fval>
+	<fval name="signKeyPairAliasAttribute"><value></value></fval>
+	<fval name="signMethod"><value>0</value></fval>
+	<fval name="signMethodTwoPass"><value>0</value></fval>
+	<fval name="successNode"><value contentType="reference">204677592842566734</value></fval>
+	<fval name="symmetricKeyAlgo"><value>AES256</value></fval>
+	<fval name="withIntegrityCheck"><value>1</value></fval>
+	<fval name="zipAlgo"><value>ZIP</value></fval>
 </entity>
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="FilterCircuit" entityPK="-499097803363733309" parentPK="699613057680812597">
 	<fval name="category"><value contentType="reference">1496588587276026097</value></fval>
