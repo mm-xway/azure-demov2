@@ -21663,6 +21663,36 @@
 	<fval name="successNode"><value contentType="reference">-4321278058083425800</value></fval>
 	<fval name="targetAttribute"><value>apimgmt.organization</value></fval>
 </entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="FilterCircuit" entityPK="-4765838843646929001" parentPK="699613057680812597">
+	<fval name="category"><value contentType="reference">1496588587276026097</value></fval>
+	<fval name="description"><value></value></fval>
+	<fval name="logMask"><value>3</value></fval>
+	<fval name="name"><value>send email alert</value></fval>
+	<fval name="start"><value contentType="reference">-6751272393773162398</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="AlertFilter" entityPK="-6751272393773162398" parentPK="-4765838843646929001">
+	<fval name="abortProcessingOnLogError"><value>0</value></fval>
+	<fval name="alertMessage"><value>${content.body}</value></fval>
+	<fval name="alertPolicy"><value contentType="reference">-1</value></fval>
+	<fval name="alertType"><value>1</value></fval>
+	<fval name="category"><value contentType="reference">788334387918032849</value></fval>
+	<fval name="logFailure"><value>Alert generation failed</value></fval>
+	<fval name="logFatal"><value>Alert generation aborted: ${circuit.exception}</value></fval>
+	<fval name="logMask"><value>2</value></fval>
+	<fval name="logMaskType"><value>SERVICE</value></fval>
+	<fval name="logSuccess"><value>Alert generation success</value></fval>
+	<fval name="name"><value>Send Email</value></fval>
+	<fval name="numberMessages"><value>1</value></fval>
+	<fval name="timePeriodMillis"><value>60000</value></fval>
+	<fval name="trackPerClient"><value>1</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="EmailAlertNotification" entityPK="-6844008865376021072" parentPK="-6751272393773162398">
+	<fval name="alertSystem"><value contentType="reference">
+<key type='AlertManager'><id field='name' value='Default Alert Configuration'/><key type='EmailAlertSystem'><id field='name' value='Email Alert - Gmail'/></key></key>	</value></fval>
+	<fval name="customMessage"><value></value></fval>
+	<fval name="messageTemplateFile"><value></value></fval>
+	<fval name="mimeType"><value contentType="reference">-1</value></fval>
+</entity>
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="FilterCircuit" entityPK="-4189655413642848495" parentPK="699613057680812597">
 	<fval name="category"><value contentType="reference">1496588587276026097</value></fval>
 	<fval name="description"><value></value></fval>
