@@ -2163,6 +2163,33 @@
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="NetService" entityPK="808463874680140255" parentPK="0">
 	<fval name="name"><value>Service</value></fval>
 </entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="RemoteHost" entityPK="-3308523039558790092" parentPK="808463874680140255">
+	<fval name="activetimeout"><value>3000000</value></fval>
+	<fval name="addressCacheTime"><value>300000</value></fval>
+	<fval name="alias"><value>justanotherbeapp</value></fval>
+	<fval name="allowHTTP11"><value>1</value></fval>
+	<fval name="connectTimeout"><value>3000000</value></fval>
+	<fval name="exportCorrelationId"><value>1</value></fval>
+	<fval name="idletimeout"><value>3000000</value></fval>
+	<fval name="includeContentLengthRequest"><value>0</value></fval>
+	<fval name="includeContentLengthResponse"><value>0</value></fval>
+	<fval name="inputBufSize"><value>8192</value></fval>
+	<fval name="inputEncodings"><value>.inherit</value></fval>
+	<fval name="maxConnections"><value>-1</value></fval>
+	<fval name="maxInputLen"><value>209715200</value></fval>
+	<fval name="maxOutputLen"><value>209715200</value></fval>
+	<fval name="maxTransTimeout"><value>1500000</value></fval>
+	<fval name="name"><value>apimdemo.centralindia.cloudapp.azure.com</value></fval>
+	<fval name="offerTlsServerName"><value>0</value></fval>
+	<fval name="outputBufSize"><value>8192</value></fval>
+	<fval name="outputEncodings"><value>.inherit</value></fval>
+	<fval name="port"><value>19083</value></fval>
+	<fval name="sessionCacheSize"><value>32</value></fval>
+	<fval name="verifyServerHostname"><value>0</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="RoundRobinLbCfg" entityPK="-6018474505064717267" parentPK="-3308523039558790092">
+	<fval name="name"><value>20a4b41a-8aa6-480e-b7ff-6a41a8a4e9e1</value></fval>
+</entity>
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="RemoteHost" entityPK="-2146664053670583755" parentPK="808463874680140255">
 	<fval name="activetimeout"><value>30000</value></fval>
 	<fval name="addressCacheTime"><value>300000</value></fval>

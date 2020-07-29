@@ -7457,21 +7457,23 @@
 	<fval name="url"><value>/client/logout/</value></fval>
 </entity>
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="SystemSettings" entityPK="-9013401755317741058" parentPK="0">
-	<fval name="activetimeout"><value>30000</value></fval>
+	<fval name="activetimeout"><value>300000</value></fval>
 	<fval name="dateFormat"><value>MM.dd.yyyy HH:mm:ss,SSS</value></fval>
-	<fval name="exportCorrelationId"><value>true</value></fval>
+	<fval name="exportCorrelationId"><value>1</value></fval>
 	<fval name="externalDataCacheRefreshIntervalSecs"><value>5</value></fval>
-	<fval name="idletimeout"><value>15000</value></fval>
+	<fval name="idletimeout"><value>150000</value></fval>
 	<fval name="inputEncodings"><value>.inherit</value></fval>
 	<fval name="ldapServiceProvider"><value>com.sun.jndi.ldap.LdapCtxFactory</value></fval>
-	<fval name="maxInputLen"><value>20971520</value></fval>
-	<fval name="maxOutputLen"><value>20971520</value></fval>
-	<fval name="maxTransTimeout"><value>240000</value></fval>
+	<fval name="maxInputLen"><value>300000000</value></fval>
+	<fval name="maxOutputLen"><value>300000000</value></fval>
+	<fval name="maxRequestMemory"></fval>
+	<fval name="maxTransTimeout"><value>2400000</value></fval>
 	<fval name="name"><value>Default System Settings</value></fval>
 	<fval name="offerTlsServerName"><value>0</value></fval>
 	<fval name="outputEncodings"><value>.inherit</value></fval>
 	<fval name="realm"><value>DefaultRealm</value></fval>
 	<fval name="schemaParserMaxPoolSize"><value>0</value></fval>
+	<fval name="serverBrand"><value></value></fval>
 	<fval name="sessionCacheSize"><value>32</value></fval>
 	<fval name="sunLdapConnectTimeout"><value>20000</value></fval>
 	<fval name="tokenDriftTimeSecs"><value>300</value></fval>
@@ -21663,6 +21665,139 @@
 	<fval name="successNode"><value contentType="reference">-4321278058083425800</value></fval>
 	<fval name="targetAttribute"><value>apimgmt.organization</value></fval>
 </entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="FilterCircuit" entityPK="-4919104169729821289" parentPK="699613057680812597">
+	<fval name="category"><value contentType="reference">1496588587276026097</value></fval>
+	<fval name="description"><value></value></fval>
+	<fval name="logMask"><value>3</value></fval>
+	<fval name="name"><value>Save file from multi-part message</value></fval>
+	<fval name="start"><value contentType="reference">-1960452527475991422</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="SaveToFileFilter" entityPK="-8494110312700565990" parentPK="-4919104169729821289">
+	<fval name="abortProcessingOnLogError"><value>0</value></fval>
+	<fval name="category"><value contentType="reference">788334387918032849</value></fval>
+	<fval name="directory"><value>${environment.VINSTDIR}/message-archive/</value></fval>
+	<fval name="failureNode"><value contentType="reference">-1</value></fval>
+	<fval name="fileName"><value>${FileName}</value></fval>
+	<fval name="includeHeaders"><value>0</value></fval>
+	<fval name="includeRequestLine"><value>0</value></fval>
+	<fval name="logFailure"><value>Filter failed</value></fval>
+	<fval name="logFatal"><value>Filter aborted due to exception</value></fval>
+	<fval name="logMask"><value>2</value></fval>
+	<fval name="logMaskType"><value>SERVICE</value></fval>
+	<fval name="logSuccess"><value>Filter passed</value></fval>
+	<fval name="maxFileSize"><value>1000</value></fval>
+	<fval name="maxNumberFiles"><value>500</value></fval>
+	<fval name="name"><value>Save to File FileName</value></fval>
+	<fval name="successNode"><value contentType="reference">-4596259139130942094</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="ChangeMessageFilter" entityPK="-4596259139130942094" parentPK="-4919104169729821289">
+	<fval name="abortProcessingOnLogError"><value>0</value></fval>
+	<fval name="body"><value> File ${FileName} created.</value></fval>
+	<fval name="category"><value contentType="reference">788334387918032849</value></fval>
+	<fval name="failureNode"><value contentType="reference">-1</value></fval>
+	<fval name="logFailure"><value>Failed in setting the message</value></fval>
+	<fval name="logFatal"><value>Error in setting the message. Error: ${circuit.exception}</value></fval>
+	<fval name="logMask"><value>2</value></fval>
+	<fval name="logMaskType"><value>SERVICE</value></fval>
+	<fval name="logSuccess"><value>Success in setting the message</value></fval>
+	<fval name="name"><value>Creating OK message</value></fval>
+	<fval name="outputContentType"><value>text/plain</value></fval>
+	<fval name="successNode"><value contentType="reference">-2474255007226989583</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="ChangeMessageFilter" entityPK="-4266009115859298701" parentPK="-4919104169729821289">
+	<fval name="abortProcessingOnLogError"><value>0</value></fval>
+	<fval name="body"><value>No file on this part.</value></fval>
+	<fval name="category"><value contentType="reference">788334387918032849</value></fval>
+	<fval name="logFailure"><value>Failed in setting the message</value></fval>
+	<fval name="logFatal"><value>Error in setting the message. Error: ${circuit.exception}</value></fval>
+	<fval name="logMask"><value>2</value></fval>
+	<fval name="logMaskType"><value>SERVICE</value></fval>
+	<fval name="logSuccess"><value>Success in setting the message</value></fval>
+	<fval name="name"><value>Set Message no files</value></fval>
+	<fval name="outputContentType"><value>text/plain</value></fval>
+	<fval name="successNode"><value contentType="reference">-2474255007226989583</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="Reflector" entityPK="-2474255007226989583" parentPK="-4919104169729821289">
+	<fval name="abortProcessingOnLogError"><value>0</value></fval>
+	<fval name="category"><value contentType="reference">788334387918032849</value></fval>
+	<fval name="httpResponseStatus"><value>200</value></fval>
+	<fval name="logFailure"><value>Failed to echo back the message</value></fval>
+	<fval name="logFatal"><value>Error occurred while echoing the message. Error: ${circuit.exception}</value></fval>
+	<fval name="logMask"><value>2</value></fval>
+	<fval name="logMaskType"><value>SERVICE</value></fval>
+	<fval name="logSuccess"><value>Successfully echoed back the message</value></fval>
+	<fval name="name"><value>Reflect Message</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="SetAttributeFilter" entityPK="-1960452527475991422" parentPK="-4919104169729821289">
+	<fval name="abortProcessingOnLogError"><value>0</value></fval>
+	<fval name="attributeValue"><value>${content.body.getHeaders().get(&quot;Content-Disposition&quot;)}</value></fval>
+	<fval name="category"><value contentType="reference">788334387918032849</value></fval>
+	<fval name="failureNode"><value contentType="reference">-1</value></fval>
+	<fval name="logFailure"><value>Failed to set the attribute value</value></fval>
+	<fval name="logFatal"><value>Error while setting the attribute value. Error: ${circuit.exception}</value></fval>
+	<fval name="logMask"><value>2</value></fval>
+	<fval name="logMaskType"><value>SERVICE</value></fval>
+	<fval name="logSuccess"><value>Set the attribute value</value></fval>
+	<fval name="messageAttribute"><value> ContentDisposition</value></fval>
+	<fval name="name"><value>Set Attribute Filter  ContentDisposition</value></fval>
+	<fval name="successNode"><value contentType="reference">4363387396577388512</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="MessageAttrContentFilter" entityPK="-1324106205919794764" parentPK="-4919104169729821289">
+	<fval name="abortProcessingOnLogError"><value>0</value></fval>
+	<fval name="category"><value contentType="reference">-7081635134173022816</value></fval>
+	<fval name="failureNode"><value contentType="reference">-4266009115859298701</value></fval>
+	<fval name="logFailure"><value>Message attribute content check failed</value></fval>
+	<fval name="logFatal"><value>Error occurred while content checking message attributes. Error: ${circuit.exception}</value></fval>
+	<fval name="logMask"><value>2</value></fval>
+	<fval name="logMaskType"><value>SERVICE</value></fval>
+	<fval name="logSuccess"><value>Message attribute content check passed</value></fval>
+	<fval name="name"><value>Validate Selector Expression is FileName set ?</value></fval>
+	<fval name="successNode"><value contentType="reference">-510510265797466287</value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="AttributeRegularExpression" entityPK="1015409373390818238" parentPK="-1324106205919794764">
+	<fval name="attributeName"><value>${FileName}</value></fval>
+	<fval name="base64Decode"><value>0</value></fval>
+	<fval name="onceOffRegularExpression"><value>.*</value></fval>
+	<fval name="required"><value>1</value></fval>
+	<fval name="substringEnd"><value></value></fval>
+	<fval name="substringStart"><value></value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="TraceFilter" entityPK="-510510265797466287" parentPK="-4919104169729821289">
+	<fval name="abortProcessingOnLogError"><value>0</value></fval>
+	<fval name="category"><value contentType="reference">788334387918032849</value></fval>
+	<fval name="doIndent"><value>0</value></fval>
+	<fval name="logFailure"><value>Failed to trace the message properties</value></fval>
+	<fval name="logFatal"><value>Error while tracing the message properties. Error: ${circuit.exception}</value></fval>
+	<fval name="logMask"><value>2</value></fval>
+	<fval name="logMaskType"><value>SERVICE</value></fval>
+	<fval name="logSuccess"><value>Traced the message properties</value></fval>
+	<fval name="name"><value>Trace Filter</value></fval>
+	<fval name="successNode"><value contentType="reference">-8494110312700565990</value></fval>
+	<fval name="traceAttributes"><value>1</value></fval>
+	<fval name="traceBody"><value>0</value></fval>
+	<fval name="traceLevel"><value>5</value></fval>
+	<fval name="traceMsg"><value></value></fval>
+</entity>
+<entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="StringReplaceFilter" entityPK="4363387396577388512" parentPK="-4919104169729821289">
+	<fval name="abortProcessingOnLogError"><value>0</value></fval>
+	<fval name="category"><value contentType="reference">788334387918032849</value></fval>
+	<fval name="destAttribute"><value>FileName</value></fval>
+	<fval name="destAttributeOverride"><value>1</value></fval>
+	<fval name="failureNode"><value contentType="reference">-4266009115859298701</value></fval>
+	<fval name="logFailure"><value>Filter failed</value></fval>
+	<fval name="logFatal"><value>Filter aborted due to exception</value></fval>
+	<fval name="logMask"><value>2</value></fval>
+	<fval name="logMaskType"><value>SERVICE</value></fval>
+	<fval name="logSuccess"><value>Filter passed</value></fval>
+	<fval name="matchBehaviour"><value>MATCH_FIRST</value></fval>
+	<fval name="matchMode"><value>REGEX_REPLACE</value></fval>
+	<fval name="name"><value>String Replace retrieve FileName from  ContentDisposition</value></fval>
+	<fval name="regexMatchString"><value>(.*)filename=&quot;(.*)&quot;(.*)</value></fval>
+	<fval name="replacementString"><value>$2</value></fval>
+	<fval name="sourceAttribute"><value> ContentDisposition</value></fval>
+	<fval name="straightMatchString"><value></value></fval>
+	<fval name="successNode"><value contentType="reference">-1324106205919794764</value></fval>
+</entity>
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="FilterCircuit" entityPK="-4765838843646929001" parentPK="699613057680812597">
 	<fval name="category"><value contentType="reference">1496588587276026097</value></fval>
 	<fval name="description"><value></value></fval>
@@ -34740,7 +34875,7 @@
 </entity>
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="ChangeMessageFilter" entityPK="-681133406417686124" parentPK="2880796974037402424">
 	<fval name="abortProcessingOnLogError"><value>0</value></fval>
-	<fval name="body"><value>&lt;status&gt;healthy&lt;/status&gt;</value></fval>
+	<fval name="body"><value>{&#xD;&#xA;&quot;status&quot;:&quot;healthy&quot;&#xD;&#xA;}</value></fval>
 	<fval name="category"><value contentType="reference">788334387918032849</value></fval>
 	<fval name="logFailure"><value>Failed in setting the message</value></fval>
 	<fval name="logFatal"><value>Error in setting the message. Error: ${circuit.exception}</value></fval>
@@ -34748,7 +34883,7 @@
 	<fval name="logMaskType"><value>SERVICE</value></fval>
 	<fval name="logSuccess"><value>Success in setting the message</value></fval>
 	<fval name="name"><value>Set Message</value></fval>
-	<fval name="outputContentType"><value>text/xml</value></fval>
+	<fval name="outputContentType"><value>application/json</value></fval>
 	<fval name="successNode"><value contentType="reference">-2096210778253387003</value></fval>
 </entity>
 <entity xmlns="http://www.vordel.com/2005/06/24/entityStore"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" type="CircuitContainer" entityPK="5905849189043230080" parentPK="6995440517216446214">
