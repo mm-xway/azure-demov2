@@ -112,6 +112,9 @@
    <node>/[CORSGroup]name=CORS Profiles</node>
   </branch>
   <branch>
+   <node>/[HSTSProfileGroup]name=HSTS Profiles</node>
+  </branch>
+  <branch>
    <node>/[NetService]</node>
    <componentType name='CircuitScheduler'/>
    <componentType name='DirectoryScanner'/>
@@ -144,64 +147,64 @@
    <node>/[UserStore]name=Default User Store</node>
   </branch>
  </storeType>
- <store id='CertStore-a9bb5736-02a9-4d00-bf5d-dde7bb7921da' type='CertStore'>
+ <store id='CertStore-6c6974b6-38ec-4502-a432-a97a29f52764' type='CertStore'>
   <name>Upgraded CertStore Store</name>
   <description>Store generated from upgrade task</description>
   <connectionCredentials>
-   <credential name='url'>CertStore-a9bb5736-02a9-4d00-bf5d-dde7bb7921da.xml</credential>
+   <credential name='url'>CertStore-6c6974b6-38ec-4502-a432-a97a29f52764.xml</credential>
   </connectionCredentials>
  </store>
- <store id='EnvSettingsStore-b911b449-2f31-47f7-b279-530e407fc28e' type='EnvSettingsStore'>
+ <store id='EnvSettingsStore-0ced8468-5ef1-481a-94c3-381959fd1f03' type='EnvSettingsStore'>
   <name>Upgraded EnvSettingsStore Store</name>
   <description>Store generated from upgrade task</description>
   <connectionCredentials>
-   <credential name='url'>EnvSettingsStore-b911b449-2f31-47f7-b279-530e407fc28e.xml</credential>
+   <credential name='url'>EnvSettingsStore-0ced8468-5ef1-481a-94c3-381959fd1f03.xml</credential>
   </connectionCredentials>
  </store>
- <store id='ExtConnsStore-eed71a83-427b-4738-a7fa-b22ed252e6c8' type='ExtConnsStore'>
+ <store id='ExtConnsStore-0c9c2f48-021f-4e68-a30a-63fc11fd752a' type='ExtConnsStore'>
   <name>Upgraded ExtConnsStore Store</name>
   <description>Store generated from upgrade task</description>
   <connectionCredentials>
-   <credential name='url'>ExtConnsStore-eed71a83-427b-4738-a7fa-b22ed252e6c8.xml</credential>
+   <credential name='url'>ExtConnsStore-0c9c2f48-021f-4e68-a30a-63fc11fd752a.xml</credential>
   </connectionCredentials>
  </store>
- <store id='ListenersStore-32d5c9f9-6d4d-4484-811b-69eeb716e2e8' type='ListenersStore'>
+ <store id='ListenersStore-381ece77-7fe4-473c-99bb-44b92fc35a81' type='ListenersStore'>
   <name>Upgraded ListenersStore Store</name>
   <description>Store generated from upgrade task</description>
   <connectionCredentials>
-   <credential name='url'>ListenersStore-32d5c9f9-6d4d-4484-811b-69eeb716e2e8.xml</credential>
+   <credential name='url'>ListenersStore-381ece77-7fe4-473c-99bb-44b92fc35a81.xml</credential>
   </connectionCredentials>
  </store>
- <store id='PrimaryStore-1179b3b0-bded-4545-be86-f19686b2871b' type='PrimaryStore'>
+ <store id='PrimaryStore-55a1feed-8410-416a-a79a-ef796c591c4c' type='PrimaryStore'>
   <name>Upgraded PrimaryStore Store</name>
   <description>Store generated from upgrade task</description>
   <connectionCredentials>
-   <credential name='url'>PrimaryStore-1179b3b0-bded-4545-be86-f19686b2871b.xml</credential>
+   <credential name='url'>PrimaryStore-55a1feed-8410-416a-a79a-ef796c591c4c.xml</credential>
   </connectionCredentials>
  </store>
- <store id='ResourceRepository-2b96f513-a5b5-4296-bf2d-199396f51a83' type='ResourceRepository'>
+ <store id='ResourceRepository-3f88934f-85d4-4623-88cd-de8c1715b558' type='ResourceRepository'>
   <name>Upgraded ResourceRepository Store</name>
   <description>Store generated from upgrade task</description>
   <connectionCredentials>
-   <credential name='url'>ResourceRepository-2b96f513-a5b5-4296-bf2d-199396f51a83.xml</credential>
+   <credential name='url'>ResourceRepository-3f88934f-85d4-4623-88cd-de8c1715b558.xml</credential>
   </connectionCredentials>
  </store>
- <store id='UserStore-afb1b0e4-b410-49cf-980f-dad11ccb94f0' type='UserStore'>
+ <store id='UserStore-a74d387f-c058-45da-9ff6-5bcb2dc23507' type='UserStore'>
   <name>Upgraded UserStore Store</name>
   <description>Store generated from upgrade task</description>
   <connectionCredentials>
-   <credential name='url'>UserStore-afb1b0e4-b410-49cf-980f-dad11ccb94f0.xml</credential>
+   <credential name='url'>UserStore-a74d387f-c058-45da-9ff6-5bcb2dc23507.xml</credential>
   </connectionCredentials>
  </store>
  <assembly id='UPGRADED'>
   <name>Upgraded Configuration</name>
-  <description>Upgraded Assembly, generated Fri Feb 05 11:24:22 UTC 2021</description>
-  <component id='CertStore-a9bb5736-02a9-4d00-bf5d-dde7bb7921da'/>
-  <component id='EnvSettingsStore-b911b449-2f31-47f7-b279-530e407fc28e'/>
-  <component id='ExtConnsStore-eed71a83-427b-4738-a7fa-b22ed252e6c8'/>
-  <component id='ListenersStore-32d5c9f9-6d4d-4484-811b-69eeb716e2e8'/>
-  <component id='PrimaryStore-1179b3b0-bded-4545-be86-f19686b2871b'/>
-  <component id='ResourceRepository-2b96f513-a5b5-4296-bf2d-199396f51a83'/>
-  <component id='UserStore-afb1b0e4-b410-49cf-980f-dad11ccb94f0'/>
+  <description>Upgraded Assembly, generated Mon May 17 12:06:51 SGT 2021</description>
+  <component id='CertStore-6c6974b6-38ec-4502-a432-a97a29f52764'/>
+  <component id='EnvSettingsStore-0ced8468-5ef1-481a-94c3-381959fd1f03'/>
+  <component id='ExtConnsStore-0c9c2f48-021f-4e68-a30a-63fc11fd752a'/>
+  <component id='ListenersStore-381ece77-7fe4-473c-99bb-44b92fc35a81'/>
+  <component id='PrimaryStore-55a1feed-8410-416a-a79a-ef796c591c4c'/>
+  <component id='ResourceRepository-3f88934f-85d4-4623-88cd-de8c1715b558'/>
+  <component id='UserStore-a74d387f-c058-45da-9ff6-5bcb2dc23507'/>
  </assembly>
 </configuration>
